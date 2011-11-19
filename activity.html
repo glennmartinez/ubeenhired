@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>ubeenhired.com</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="HAPedit 3.1">
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<script type="text/javascript" src="js/jquery-1.7.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    //hide message_body after the first one
+	$(".message_list .message_body:gt(0)").hide();
+	
+	//hide message li after the 5th
+	$(".message_list li:gt(4)").hide();
+
+	
+	//toggle message_body
+	$(".message_head").click(function(){
+		$(this).next(".message_body").slideToggle(500)
+		return false;
+	});
+
+	//collapse all messages
+	$(".collpase_all_message").click(function(){
+		$(".message_body").slideUp(500)
+		return false;
+	});
+
+	//show all messages
+	$(".show_all_message").click(function(){
+		$(this).hide()
+		$(".show_recent_only").show()
+		$(".message_list li:gt(4)").slideDown()
+		return false;
+	});
+
+	//show recent messages only
+	$(".show_recent_only").click(function(){
+		$(this).hide()
+		$(".show_all_message").show()
+		$(".message_list li:gt(4)").slideUp()
+		return false;
+	});
+
+});
+</script>
+<div id="maincontainer">
+
+<div id="topsection"><div class="innertube"><h1>ubeenhired.com</h1></div></div>
+
+<div id="contentwrapper">
+   
+<div id="contentcolumn">
+    <h3>Please Enter Your Profile</h3><br>
+    <ol class="message_list">
+    <li>
+
+		<p class="message_head"><cite>someone:</cite> <span class="timestamp">1 minute ago</span></p>
+		<div class="message_body">
+			<p>Hello Nick,<br />
+				<br />
+				This is the latest message display. The rest are collapsed by default</p>
+		</div>
+
+	</li>
+	<li>
+		<p class="message_head"><cite>nick:</cite> <span class="timestamp">2 minutes ago</span></p>
+		<div class="message_body">
+			<p>message here</p>
+		</div>
+	</li>
+
+	<li>
+		<p class="message_head"><cite>someone:</cite> <span class="timestamp">1 day ago</span></p>
+		<div class="message_body">
+			<p>message here</p>
+		</div>
+	</li>
+	<li>
+
+		<p class="message_head"><cite>nick:</cite> <span class="timestamp">2 days ago</span></p>
+		<div class="message_body">
+			<p>message here</p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>someone:</cite> <span class="timestamp">3 days ago</span></p>
+
+		<div class="message_body">
+			<p>message here</p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>nick:</cite> <span class="timestamp">5 days ago</span></p>
+		<div class="message_body">
+
+			<p>message here</p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>someone:</cite> <span class="timestamp">6 days ago</span></p>
+		<div class="message_body">
+			<p>message here</p>
+
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>nick:</cite> <span class="timestamp">7 days ago</span></p>
+		<div class="message_body">
+			<p>message here</p>
+		</div>
+
+	</li>
+	<li>
+		<p class="message_head"><cite>someone:</cite> <span class="timestamp">8 days ago</span></p>
+		<div class="message_body">
+			<p>message here</p>
+		</div>
+	</li>
+
+</ol>
+<p class="collapse_buttons"><a href="#" class="show_all_message">Show all message (9)</a> <a href="#" class="show_recent_only">Show 5 only</a> <a href="#" class="collpase_all_message">Collapse all</a></p>
+   
+</div>
+</div>
+
+<div id="leftcolumn">
+    <ul>
+        <li> <a href="profile.html">Profile </a> </li>
+        <li><a href="activity.html">Activity </a>  </li>
+         <li> <a href="jobsearch.html">Job Search </a>  </li>
+        <li> <a href="contacts.html">Contacts </a>  </li>
+          <li> <a href="contracts.html">Contracts </a> </li>
+        <li> <a href="profile.html">Profile </a>  </li>
+    </ul>
+</div>
+
+<div id="rightcolumn">
+<div class="innertube"><b>Right Column: <em>190px</em></b> <script type="text/javascript">filltext(15)</script></div>
+</div>
+
+<div id="footer"><a href="http://www.dynamicdrive.com/style/">Dynamic Drive CSS Library</a></div>
+
+</div>
+</body>
+
+</html>
